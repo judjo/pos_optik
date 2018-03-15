@@ -48,9 +48,7 @@ $newID = $char . sprintf("%03s", $noUrut);
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Master</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
+
           </a>
           <ul class="treeview-menu">
             <li><a href="optik.php"><i class="fa fa-list"></i> Data Optik</a></li>
@@ -59,6 +57,34 @@ $newID = $char . sprintf("%03s", $noUrut);
             <li><a href="supplier.php"><i class="fa fa-list"></i> Data Suplier</a></li>
             <li><a href="konsumen.php"><i class="fa fa-list"></i> Data Konsumen</a></li>
           </ul>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-money"></i>
+            <span>Transaksi</span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="t_penjualan.php"><i class="fa fa-list"></i> Penjualan Barang</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-book"></i>
+            <span>Laporan</span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="l_penjualan.php"><i class="fa fa-list"></i> Penjualan Barang</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i>
+            <span>Users</span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="u_admin.php"><i class="fa fa-list"></i> Admin</a></li>
+            <li><a href="u_karyawan.php"><i class="fa fa-list"></i> Karyawan</a></li>
+          </ul>
+        </li>		  
         </li>
 			        <li><a href="about.php"><i class="fa fa-info-circle"></i><span>Tentang Aplikasi</span></a></li>
           </ul>

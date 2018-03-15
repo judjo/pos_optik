@@ -21,8 +21,8 @@
 									<td>$optik[kode_kategori]</td>
 									<td>$optik[nama_kategori]</td>
 									<td>
-										<a href='#' class='open_modal' id='$optik[id_kategori]'>Edit</a> |
-										<a href='#' onClick='confirm_delete(\"kategori_delete.php?id_kategori=$optik[id_kategori]\")'>Hapus</a>
+										<a href='#' class='open_modal' id='$optik[id_kategori]'><button class='fa fa-edit btn btn-primary'> </button> </a> 
+										<a href='#' onClick='confirm_delete(\"kategori_delete.php?id_kategori=$optik[id_kategori]\")'> <button class='fa fa-trash btn btn-danger'> </button></a>
 									</td>
 								</tr>";
 						}

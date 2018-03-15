@@ -86,10 +86,10 @@ include "auth_user.php";
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Data Kategori
+            Laporan
           </h1>
           <ol class="breadcrumb">
-            <li><i class="fa fa-user"></i> Data Kategori Barang</li>
+            <li><i class="fa fa-user"></i> Penjualan Barang</li>
           </ol>
         </section>
 
@@ -102,80 +102,18 @@ include "auth_user.php";
 
                 </div><!-- /.box-header -->
                 <div class="box-body">
-				<a href="#"><button class="btn btn-success" type="button" data-target="#ModalAdd" data-toggle="modal"><i class="fa fa-plus"></i> Tambah Kategori</button></a>
+				<a href="#"></a>
                   <br></br>
 				  <table id="data" class="table table-bordered table-striped table-scalable">
 						<?php
-							include "dt_kategori.php";
+							include "dt_lp.php";
 						?>
                   </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div><!-- /.col -->
           </div><!-- /.row -->
-        </section><!-- /.content -->
-		
-		<!-- Modal Popup  -->
-		<div id="ModalAdd" class="modal fade" tabindex="-1" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Tambah Data Kategori</h4>
-					</div>
-					<div class="modal-body">
-						<form action="kategori_add.php" name="modal_popup" enctype="multipart/form-data" method="post">
-							<div class="form-group">
-								<label>Kode Kategori</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-list"></i>
-										</div>
-										<input name="kode_kategori" type="text" class="form-control" placeholder="" required />
-									</div>
-							</div>
-							<div class="form-group">
-								<label>Nama Kategori</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-list"></i>
-										</div>
-										<input name="nama_kategori" type="text" class="form-control" placeholder="" required />
-									</div>
-							</div>
-												
-							<div class="modal-footer">
-								<button class="btn btn-success" type="submit">
-									Tambah
-								</button>
-								<button type="reset" class="btn btn-danger"  data-dismiss="modal" aria-hidden="true">
-									Batal
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Modal Popup Edit -->
-		<div id="ModalEditKategori" class="modal fade" tabindex="-1" role="dialog"></div>
-		
-		<!-- Modal Popup untuk delete--> 
-		<div class="modal fade" id="modal_delete">
-			<div class="modal-dialog">
-				<div class="modal-content" style="margin-top:100px;">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" style="text-align:center;">Anda Yakin Hapus Data ini?</h4>
-					</div>    
-					<div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
-						<a href="#" class="btn btn-danger" id="delete_link">Delete</a>
-						<button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
-					</div>
-				</div>
-			</div>
-		</div>
+        </section><!-- /.content -->		
 		
     </div><!-- /.content-wrapper -->
     <?php

@@ -36,8 +36,8 @@
 									<td>$barang[kode_supplier]</td>
 									<td>$barang[stok]</td>
 									<td>
-										<a href='#' class='open_modal' id='$barang[id_produk]'>Edit</a> |
-										<a href='#' onClick='confirm_delete(\"barang_delete.php?id_produk=$barang[id_produk]\")'>Delete</a>
+										<a href='#' class='open_modal' id='$barang[id_produk]'> <i class='fa fa-pencil'></i></a> |
+										<a href='#' onClick='confirm_delete(\"barang_delete.php?id_produk=$barang[id_produk]\")'> <i class='fa fa-trash'></i></a>
 									</td>
 								</tr>";
 						}

@@ -28,8 +28,9 @@
 									<td>$optik[tgl_lahir]</td>
 									<td>$optik[alamat]</td>
 									<td>
-										<a href='#' class='open_modal' id='$optik[id_konsumen]'>Edit</a> |
-										<a href='#' onClick='confirm_delete(\"konsumen_delete.php?=$optik[id_konsumen]\")'>Hapus</a>
+										<a href='#' class='open_modal' id='$optik[id_konsumen]'><button class='fa fa-edit btn btn-primary'> </button></a>
+										<a href='#' onClick='confirm_delete(\"konsumen_delete.php?=$optik[id_konsumen]\")'>
+										<button class='fa fa-trash btn btn-danger'> </button></a>
 									</td>
 								</tr>";
 						}

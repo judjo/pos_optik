@@ -32,8 +32,9 @@
 									<td>$suplier[sales]</td>
 									<td>$suplier[keterangan]</td>
 									<td>
-										<a href='#' class='open_modal' id='$suplier[id_supplier]'>Edit</a> |
-										<a href='#' onClick='confirm_delete(\"supplier_delete.php?id_supplier=$suplier[id_supplier]\")'>Delete</a>
+										<a href='#' class='open_modal' id='$suplier[id_supplier]'><button class='fa fa-edit btn btn-primary'> </button></a>
+										<a href='#' onClick='confirm_delete(\"supplier_delete.php?id_supplier=$suplier[id_supplier]\")'>
+										<button class='fa fa-trash btn btn-danger'> </button></a>
 									</td>
 								</tr>";
 						}

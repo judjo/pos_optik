@@ -63,8 +63,7 @@ include "auth_user.php";
             <span>Transaksi</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="t_pp.php"><i class="fa fa-list"></i> Pembelian/Pemesanan</a></li>
-            <li><a href="t_supplier.php"><i class="fa fa-list"></i> Suplier</a></li>
+            <li><a href="t_penjualan.php"><i class="fa fa-list"></i> Penjualan Barang</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -73,10 +72,7 @@ include "auth_user.php";
             <span>Laporan</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="l_pb.php"><i class="fa fa-list"></i> Pembelian Barang</a></li>
-            <li><a href="t_pp.php"><i class="fa fa-list"></i> Pembelian Pesanan</a></li>
-            <li><a href="t_harian.php"><i class="fa fa-list"></i> Harian</a></li>
-            <li><a href="t_tahunan.php"><i class="fa fa-list"></i> Tahunan</a></li>
+            <li><a href="l_penjualan.php"><i class="fa fa-list"></i> Penjualan Barang</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -96,33 +92,99 @@ include "auth_user.php";
       </aside>
 
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Dashboard
-          </h1>
-          <ol class="breadcrumb">
-            <li><i class="fa fa-home"></i> Dashboard</li>
-          </ol>
-        </section>
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
 
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header">
-					
-                </div><!-- /.box-header -->
-                <div class="box-body">
-					
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+		<?php
+			if ($result = mysqli_query($konek, "SELECT * FROM produk"))
+			{
+			$row_cnt = mysqli_num_rows($result);
+			mysqli_free_result($result);
+			}
+			mysqli_close($konek);		
+		?>
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3><?php echo $row_cnt; ?></h3>
+
+              <p>Barang</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="barang.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->		  
+		  
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3> 4</h3>
+
+              <p>Kategori Barang</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="kategori.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>44</h3>
+
+              <p>Supplier</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="supplier.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>65</h3>
+
+              <p>Konsumen</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="konsumen.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+	<!-- /.content-wrapper -->
     <?php
 		include	"content_footer.php";
 	?>

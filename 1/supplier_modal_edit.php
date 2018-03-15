@@ -31,20 +31,7 @@ while($kategori = mysqli_fetch_array($querykategori)){
 										<div class="input-group-addon">
 											<i class="fa fa-university"></i>
 										</div>
-										<?php
-											$query = "SELECT max(kode_supplier) as maxKode FROM supplier";
-											$hasil = mysqli_query($konek,$query);
-											$data = mysqli_fetch_array($hasil);
-											$kodeSupplier = $data['maxKode'];
-
-											$noUrut = (int) substr($kodeSupplier, 3, 3);
-											$noUrut++;
-
-											$char = "S ";
-											$today=date("Ymd");
-											$newID = $char . $today. sprintf("%03s", $noUrut);										
-										?>										
-										<input name="kode_supplier" type="text" class="form-control" value="<?php echo $newID; ?>" readonly />
+										<input name="kode_supplier" type="text" class="form-control" placeholder="" value="<?php echo $kategori["kode_supplier"]; ?>"/>										
 									</div>
 							</div>
 							<div class="form-group">

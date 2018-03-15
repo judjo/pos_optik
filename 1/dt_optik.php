@@ -31,8 +31,9 @@
 									<td>$optik[fax]</td>
 									<td>$optik[keteranga]</td>
 									<td>
-										<a href='#' class='open_modal' id='$optik[id_data_optik]'>Edit</a> |
-										<a href='#' onClick='confirm_delete(\"optik_delete.php?id_data_optik=$optik[id_data_optik]\")'>Hapus</a>
+										<a href='#' class='open_modal' id='$optik[id_data_optik]'><button class='fa fa-edit btn btn-primary'> </button></a> |
+										<a href='#' onClick='confirm_delete(\"optik_delete.php?id_data_optik=$optik[id_data_optik]\")'>
+										<button class='fa fa-trash btn btn-danger'> </button></a>
 									</td>
 								</tr>";
 						}
