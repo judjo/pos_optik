@@ -8,12 +8,6 @@ Petunjuk:
 3. import/create database di localhost
 4. aplikasi siap dijalankan di localhost
 
-jika ada pertanyaan silakan email: sobatjudjo@gmail.com;
-
-jika ingin memberikan donasi untuk perkembangan aplikasi ini silakan:
-BCA 5211010518 
-atas nama Yudi Santoso
-
 
 
 
